@@ -5,13 +5,13 @@ import * as THREE from "three"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { HeroPage } from "../hero/HeroPage"
-// import { MobileNav } from "@/components/mobile-nav"
+import { AboutPage } from "../about/AboutPage"
+import { NavigationPage } from "../navigation/NavigationPage"
 
 gsap.registerPlugin(ScrollTrigger)
 
 
-
-export default function HomePage() {
+export const HomePage = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const sceneRef = useRef<THREE.Scene | null>(null)
   const cameraRef = useRef<THREE.PerspectiveCamera | null>(null)
@@ -75,7 +75,7 @@ export default function HomePage() {
     })
     const wireframe = new THREE.Mesh(wireframeGeometry, wireframeMaterial)
     planetGroup.add(wireframe)
-    
+
 
 
     const particlesGeometry = new THREE.BufferGeometry()
@@ -172,15 +172,25 @@ export default function HomePage() {
     }
   }, [])
 
+  
+
   return (
     <div className="relative min-h-screen overflow-x-hidden bg-background">
       {/* 3D Canvas Background */}
       <canvas ref={canvasRef} className="fixed inset-0 w-full h-full" style={{ zIndex: 0 }} />
 
-      {/* Mobile-style Navigation on Right */}
-      {/* <MobileNav /> */}
+      <div className="relative z-10">
+        <NavigationPage activeSection="home" />
 
-      <HeroPage />
+        <section id="home" className="min-h-screen">
+          <HeroPage />
+        </section>
+
+        <section id="about" className="min-h-screen py-20">
+          <AboutPage />
+        </section>
+      </div>
+
 
     </div>
   )
