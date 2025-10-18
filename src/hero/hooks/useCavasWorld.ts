@@ -2,13 +2,14 @@ import { useEffect, useRef } from "react"
 import * as THREE from "three"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { skills } from "../data/Skills.data"
 
 
 gsap.registerPlugin(ScrollTrigger)
 
 
 export const useCanvasWorld = () => {
-     const canvasRef = useRef<HTMLCanvasElement>(null)
+  const canvasRef = useRef<HTMLCanvasElement>(null)
   const sceneRef = useRef<THREE.Scene | null>(null)
   const cameraRef = useRef<THREE.PerspectiveCamera | null>(null)
   const rendererRef = useRef<THREE.WebGLRenderer | null>(null)
@@ -72,7 +73,56 @@ export const useCanvasWorld = () => {
     const wireframe = new THREE.Mesh(wireframeGeometry, wireframeMaterial)
     planetGroup.add(wireframe)
 
+    skills.forEach((skill, index) => {
+      const angle = (index / skills.length) * Math.PI * 2
+      const height = Math.sin(index * 0.7) * 0.5
+      const radius = 2.5
 
+      const x = Math.cos(angle) * Math.cos(height) * radius
+      const y = Math.sin(height) * radius
+      const z = Math.sin(angle) * Math.cos(height) * radius
+
+      const markerGeometry = new THREE.SphereGeometry(0.15, 16, 16)
+      const markerMaterial = new THREE.MeshStandardMaterial({
+        color: '#3b82f6',
+        emissive: '#06b6d4',
+        emissiveIntensity: 1,
+        metalness: 0.8,
+        roughness: 0.2,
+      })
+      const marker = new THREE.Mesh(markerGeometry, markerMaterial)
+      marker.position.set(x, y, z)
+      planetGroup.add(marker)
+
+      const ringGeometry = new THREE.RingGeometry(0.2, 0.25, 32)
+      const ringMaterial = new THREE.MeshBasicMaterial({
+        color: skill.color,
+        transparent: true,
+        opacity: 0.6,
+        side: THREE.DoubleSide,
+      })
+      const ring = new THREE.Mesh(ringGeometry, ringMaterial)
+      ring.position.set(x, y, z)
+      ring.lookAt(0, 0, 0)
+      planetGroup.add(ring)
+
+      gsap.to(ring.scale, {
+        x: 1.5,
+        y: 1.5,
+        duration: 1.5 + index * 0.2,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+      })
+
+      gsap.to(ringMaterial, {
+        opacity: 0.2,
+        duration: 1.5 + index * 0.2,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+      })
+    })
 
     const particlesGeometry = new THREE.BufferGeometry()
     const particlesCount = 2000
