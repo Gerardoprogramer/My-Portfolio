@@ -1,28 +1,10 @@
-import { useEffect, useRef, useState } from "react"
 import { TechHexagon } from "./components/TechHexagon"
 import { skills } from "@/hero/data/Skills.data"
+import { useSectionVisibility } from "@/hero/hooks/useSectionVisibility"
 
 export const SkillsPage = () => {
-    const [isVisible, setIsVisible] = useState(false)
-    const [selectedSkill, setSelectedSkill] = useState<string | null>(null)
-    const sectionRef = useRef<HTMLDivElement>(null)
 
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true)
-                }
-            },
-            { threshold: 0.3 },
-        )
-
-        if (sectionRef.current) {
-            observer.observe(sectionRef.current)
-        }
-
-        return () => observer.disconnect()
-    }, [])
+    const { sectionRef, isVisible, selectedSkill, setSelectedSkill } = useSectionVisibility()
 
     return (
         <div ref={sectionRef} className="container mx-auto px-6 max-w-6xl">
