@@ -1,3 +1,4 @@
+import { CustomTitle } from "@/components/custom/CustomTitle"
 import { TechHexagon } from "./components/TechHexagon"
 import { skills } from "@/hero/data/Skills.data"
 import { useSectionVisibility } from "@/hero/hooks/useSectionVisibility"
@@ -9,10 +10,9 @@ export const SkillsPage = () => {
     return (
         <div ref={sectionRef} className="container mx-auto px-6 max-w-6xl">
             <div className="space-y-12">
-                <div className="space-y-4">
-                    <h2 className="text-4xl md:text-5xl font-bold text-balance">Skills & Tecnologías</h2>
-                    <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent rounded-full" />
-                </div>
+                <CustomTitle
+                    title="Skills & Tecnologías"
+                />
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {skills.map((skill, index) => (
