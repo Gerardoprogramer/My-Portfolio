@@ -6,6 +6,7 @@ import { useCanvasWorld } from "@/hero/hooks/useCavasWorld"
 import { SkillsPage } from "../skills/SkillsPage"
 import { useSectionActive } from "@/hero/hooks/useSectionActive"
 import { ProjectPage } from "../projects/ProjectPage"
+import { PlaygroundPage } from "../playground/PlaygroundPage"
 
 
 export const HomePage = () => {
@@ -35,6 +36,10 @@ export const HomePage = () => {
 
         <section id="projects" className="min-h-screen py-20">
           <ProjectPage />
+        </section>
+
+        <section id="playground" className="min-h-screen py-20">
+          <PlaygroundPage />
         </section>
       </div>
 
