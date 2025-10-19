@@ -5,13 +5,14 @@ import { NavigationPage } from "../navigation/NavigationPage"
 import { useCanvasWorld } from "@/hero/hooks/useCavasWorld"
 import { SkillsPage } from "../skills/SkillsPage"
 import { useSectionActive } from "@/hero/hooks/useSectionActive"
+import { ProjectPage } from "../projects/ProjectPage"
 
 
 export const HomePage = () => {
 
   const { canvasRef } = useCanvasWorld()
-const { activeSection } = useSectionActive()
-  
+  const { activeSection } = useSectionActive()
+
   return (
     <div className="relative min-h-screen overflow-x-hidden bg-background">
       {/* 3D Canvas Background */}
@@ -27,10 +28,14 @@ const { activeSection } = useSectionActive()
         <section id="about" className="min-h-screen py-20">
           <AboutPage />
         </section>
-        
-      <section id="skills" className="min-h-screen py-20">
-        <SkillsPage />
-      </section>
+
+        <section id="skills" className="min-h-screen py-20">
+          <SkillsPage />
+        </section>
+
+        <section id="projects" className="min-h-screen py-20">
+          <ProjectPage />
+        </section>
       </div>
 
 
