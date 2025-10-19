@@ -1,5 +1,8 @@
 import { CustomTitle } from "@/components/custom/CustomTitle"
+import { DecorativeButton } from "./decoratives/DecorativeButton"
+import { lazy } from "react"
 
+const SnakeGame = lazy(() => import("@/components/games/SnakeGame").then((mod) => ({ default: mod.SnakeGame })))
 
 export const PlaygroundPage = () => {
     return (
@@ -12,8 +15,7 @@ export const PlaygroundPage = () => {
                     zone="Zona Experimental"
                 />
 
-
-
+                <DecorativeButton title="Explora mis proyectos como un juego" />
 
             </div>
         </div>
