@@ -5,7 +5,7 @@ const SnakeGame = lazy(() => import("@/components/games/SnakeGame").then((mod) =
 const MemoryGame = lazy(() => import("@/components/games/MemoryGame").then((mod) => ({ default: mod.MemoryGame })))
 const TypingGame = lazy(() => import("@/components/games/TypingGame").then((mod) => ({ default: mod.TypingGame })))
 
-const games: Game[] = [
+export const games: Game[] = [
   {
     id: "snake",
     title: "Snake Game",

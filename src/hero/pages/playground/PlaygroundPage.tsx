@@ -1,10 +1,22 @@
 import { CustomTitle } from "@/components/custom/CustomTitle"
 import { DecorativeButton } from "./decoratives/DecorativeButton"
-import { lazy } from "react"
+import { games } from "@/hero/data/games.data"
+import { useState } from "react"
+import { GameGrid } from "./GameGrid/GameGrid"
+import type { Game } from "@/hero/interfaces/game.interface"
 
-const SnakeGame = lazy(() => import("@/components/games/SnakeGame").then((mod) => ({ default: mod.SnakeGame })))
 
 export const PlaygroundPage = () => {
+
+    const [selectedGame, setSelectedGame] = useState<string | null>(null)
+
+    const currentGame = games.find((g) => g.id === selectedGame)
+    const GameComponent = currentGame?.component
+
+    const handleSelectGame = (game: Game) => {
+        setSelectedGame(game.id)
+    }
+
     return (
         <div className="container mx-auto px-6 max-w-6xl">
             <div className="space-y-12">
@@ -16,6 +28,11 @@ export const PlaygroundPage = () => {
                 />
 
                 <DecorativeButton title="Explora mis proyectos como un juego" />
+
+                <GameGrid
+                    games={games}
+                    onSelectGame={handleSelectGame}
+                />
 
             </div>
         </div>
