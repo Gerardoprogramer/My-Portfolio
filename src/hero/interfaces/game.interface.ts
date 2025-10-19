@@ -1,9 +1,7 @@
 
 import type { ComponentType, LazyExoticComponent } from "react"
 
-
-type GameComponent = LazyExoticComponent<ComponentType<any>>
-
+export type GameComponent = LazyExoticComponent<ComponentType<any>>
 export interface Game {
   id: string
   title: string

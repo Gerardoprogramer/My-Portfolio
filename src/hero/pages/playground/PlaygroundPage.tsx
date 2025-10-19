@@ -4,6 +4,7 @@ import { games } from "@/hero/data/games.data"
 import { useState } from "react"
 import { GameGrid } from "./GameGrid/GameGrid"
 import type { Game } from "@/hero/interfaces/game.interface"
+import { GameDialog } from "./GameDialog/GameDialog"
 
 
 export const PlaygroundPage = () => {
@@ -32,6 +33,13 @@ export const PlaygroundPage = () => {
                 <GameGrid
                     games={games}
                     onSelectGame={handleSelectGame}
+                />
+
+                <GameDialog
+                    selectedGame={selectedGame}
+                    setSelectedGame={setSelectedGame}
+                    currentGame={currentGame}
+                    GameComponent={GameComponent}
                 />
 
             </div>

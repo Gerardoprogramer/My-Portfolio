@@ -22,7 +22,7 @@ export const SnakeGame = () => {
                 ref={canvasRef}
                 width={gridSize * tileCount}
                 height={gridSize * tileCount}
-                className="border-2 border-border rounded-xl shadow-2xl"
+                className="border-2 border-border rounded-xl shadow-2xl bg-red-700"
             />
 
             {gameOver && (
