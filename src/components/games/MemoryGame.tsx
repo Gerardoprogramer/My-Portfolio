@@ -1,97 +1,9 @@
-
-import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
-
-type Card = {
-  id: number
-  tech: string
-  emoji: string
-  isFlipped: boolean
-  isMatched: boolean
-}
-
-const technologies = [
-  { tech: "React", emoji: "⚛️" },
-  { tech: "Next.js", emoji: "▲" },
-  { tech: "TypeScript", emoji: "📘" },
-  { tech: "Node.js", emoji: "🟢" },
-  { tech: "MongoDB", emoji: "🍃" },
-  { tech: "Docker", emoji: "🐳" },
-  { tech: "Git", emoji: "🔀" },
-  { tech: "AWS", emoji: "☁️" },
-]
+import { Button } from "../ui/button";
+import { useMemoryGame } from "./hooks/useMemoryGame"
 
 export const MemoryGame = () => {
-  const [cards, setCards] = useState<Card[]>([])
-  const [flippedCards, setFlippedCards] = useState<number[]>([])
-  const [moves, setMoves] = useState(0)
-  const [matches, setMatches] = useState(0)
-  const [gameWon, setGameWon] = useState(false)
 
-  const initializeGame = () => {
-    const duplicatedCards = [...technologies, ...technologies]
-      .sort(() => Math.random() - 0.5)
-      .map((item, index) => ({
-        id: index,
-        tech: item.tech,
-        emoji: item.emoji,
-        isFlipped: false,
-        isMatched: false,
-      }))
-
-    setCards(duplicatedCards)
-    setFlippedCards([])
-    setMoves(0)
-    setMatches(0)
-    setGameWon(false)
-  }
-
-  useEffect(() => {
-    initializeGame()
-  }, [])
-
-  useEffect(() => {
-    if (matches === technologies.length) {
-      setGameWon(true)
-    }
-  }, [matches])
-
-  const handleCardClick = (id: number) => {
-    if (flippedCards.length === 2 || cards[id].isFlipped || cards[id].isMatched) return
-
-    const newCards = [...cards]
-    newCards[id].isFlipped = true
-    setCards(newCards)
-
-    const newFlippedCards = [...flippedCards, id]
-    setFlippedCards(newFlippedCards)
-
-    if (newFlippedCards.length === 2) {
-      setMoves(moves + 1)
-      const [firstId, secondId] = newFlippedCards
-
-      if (cards[firstId].tech === cards[secondId].tech) {
-        // Match found
-        setTimeout(() => {
-          const matchedCards = [...cards]
-          matchedCards[firstId].isMatched = true
-          matchedCards[secondId].isMatched = true
-          setCards(matchedCards)
-          setFlippedCards([])
-          setMatches(matches + 1)
-        }, 500)
-      } else {
-        // No match
-        setTimeout(() => {
-          const resetCards = [...cards]
-          resetCards[firstId].isFlipped = false
-          resetCards[secondId].isFlipped = false
-          setCards(resetCards)
-          setFlippedCards([])
-        }, 1000)
-      }
-    }
-  }
+  const { gameWon, handleCardClick, matches, moves, cards, technologies, flippedCards, initializeGame } = useMemoryGame();
 
   return (
     <div className="flex flex-col items-center gap-6 p-6">
@@ -118,11 +30,10 @@ export const MemoryGame = () => {
             key={card.id}
             onClick={() => handleCardClick(card.id)}
             disabled={card.isMatched || flippedCards.length === 2}
-            className={`aspect-square rounded-xl border-2 transition-all duration-300 transform hover:scale-105 ${
-              card.isFlipped || card.isMatched
-                ? "bg-gradient-to-br from-primary to-accent border-primary"
-                : "bg-card border-border hover:border-primary"
-            } ${card.isMatched ? "opacity-50" : ""}`}
+            className={`aspect-square rounded-xl border-2 transition-all duration-300 transform hover:scale-105 ${card.isFlipped || card.isMatched
+              ? "bg-gradient-to-br from-primary to-accent border-primary"
+              : "bg-card border-border hover:border-primary"
+              } ${card.isMatched ? "opacity-50" : ""}`}
           >
             <div className="flex flex-col items-center justify-center h-full">
               {card.isFlipped || card.isMatched ? (

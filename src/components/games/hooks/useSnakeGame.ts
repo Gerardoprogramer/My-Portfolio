@@ -5,7 +5,7 @@ type Direction = "UP" | "DOWN" | "LEFT" | "RIGHT"
 type Position = { x: number; y: number }
 
 export const useSnakeGame = () => {
-      const canvasRef = useRef<HTMLCanvasElement>(null)
+  const canvasRef = useRef<HTMLCanvasElement>(null)
   const [score, setScore] = useState(0)
   const [gameOver, setGameOver] = useState(false)
   const [gameStarted, setGameStarted] = useState(false)
