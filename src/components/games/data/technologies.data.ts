@@ -1,5 +1,6 @@
+import type { technologie } from "../interface/technologies.interface"
 
-export const technologies = [
+export const technologies: technologie[] = [
   { tech: "React", emoji: "⚛️" },
   { tech: "Next.js", emoji: "▲" },
   { tech: "TypeScript", emoji: "📘" },
