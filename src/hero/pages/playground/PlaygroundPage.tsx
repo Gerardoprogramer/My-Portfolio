@@ -5,6 +5,7 @@ import { useState } from "react"
 import { GameGrid } from "./GameGrid/GameGrid"
 import type { Game } from "@/hero/interfaces/game.interface"
 import { GameDialog } from "./GameDialog/GameDialog"
+import { ExperimentsGrid } from "./Experiments/ExperimentsGrid"
 
 
 export const PlaygroundPage = () => {
@@ -41,6 +42,7 @@ export const PlaygroundPage = () => {
                     currentGame={currentGame}
                     GameComponent={GameComponent}
                 />
+                <ExperimentsGrid/>
 
             </div>
         </div>
