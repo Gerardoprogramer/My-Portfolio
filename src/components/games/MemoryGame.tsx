@@ -107,7 +107,7 @@ export const MemoryGame = () => {
             </span>
           </div>
         </div>
-        <Button onClick={initializeGame} variant="outline" className="bg-gradient-to-r from-primary to-accent">
+        <Button onClick={initializeGame} variant="outline" className="bg-accent/70">
           Nuevo Juego
         </Button>
       </div>

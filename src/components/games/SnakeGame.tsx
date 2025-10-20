@@ -13,7 +13,7 @@ export const SnakeGame = () => {
                 <div className="text-2xl font-bold">
                     Score: <span className="text-primary">{score}</span>
                 </div>
-                <Button onClick={resetGame} variant="outline" className="bg-gradient-to-r from-primary to-accent">
+                <Button onClick={resetGame} variant='outline' className="bg-accent/70">
                     {gameStarted ? "Reiniciar" : "Iniciar"}
                 </Button>
             </div>
