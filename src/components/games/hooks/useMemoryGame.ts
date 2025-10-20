@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react'
 import { technologies } from '../data/technologies.data'
 import type {Card} from '../interface/CardMemoryGame.interface'
+import confetti from 'canvas-confetti';
 
 export const useMemoryGame = () => {
 
@@ -35,6 +36,11 @@ export const useMemoryGame = () => {
   useEffect(() => {
     if (matches === technologies.length) {
       setGameWon(true)
+      confetti({
+        particleCount: 100,
+        spread: 120,
+        origin: { y: 0.6 },
+      });
     }
   }, [matches])
 
