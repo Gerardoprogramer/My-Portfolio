@@ -154,12 +154,10 @@ export const useCanvasWorld = () => {
     let mouseX = 0
     let mouseY = 0
     let targetRotationX = 0
-    let targetRotationY = 0
 
     const handleMouseMove = (event: MouseEvent) => {
       mouseX = (event.clientX / window.innerWidth) * 2 - 1
       mouseY = -(event.clientY / window.innerHeight) * 2 + 1
-      targetRotationY = mouseX * 0.5
       targetRotationX = mouseY * 0.3
     }
 
