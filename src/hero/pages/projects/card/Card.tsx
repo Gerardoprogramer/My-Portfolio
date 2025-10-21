@@ -1,16 +1,23 @@
 import { ExternalLink, Github } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import type { project } from "@/hero/interfaces/Project.interface"
+import { Badge } from "@/components/ui/badge"
+import type { Project } from "@/hero/interfaces/Project.interface"
 
-export const Card = ({ project }: { project: project }) => {
+interface CardProps{
+    project: Project,
+    onClick: () => void
+}
+
+export const Card = ({ project, onClick }: CardProps) => {
     return (
         <div
             key={project.title}
             className="group bg-card border border-border rounded-2xl overflow-hidden hover:border-primary hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300"
+            onClick={onClick}
         >
             <div className="relative aspect-video overflow-hidden bg-secondary">
                 <img
-                    src={project.image || "/placeholder.svg"}
+                    src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -22,22 +29,23 @@ export const Card = ({ project }: { project: project }) => {
                 <p className="text-sm text-muted-foreground leading-relaxed">{project.description}</p>
 
                 <div className="flex flex-wrap gap-2">
-                    {project.tech.map((tech) => (
-                        <span key={tech} className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">
-                            {tech}
-                        </span>
-                    ))}
+          {project.technologies.slice(0, 5).map((tech) => (
+            <Badge key={tech.name} variant="secondary" className="text-xs">
+              <span className="mr-1">{tech.icon}</span>
+              {tech.name}
+            </Badge>
+          ))}
                 </div>
 
                 <div className="flex gap-3 pt-2">
                     <Button size="sm" variant="outline" className="flex-1 bg-transparent" asChild>
-                        <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                        <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
                             <ExternalLink className="w-4 h-4 mr-2" />
                             Demo
                         </a>
                     </Button>
                     <Button size="sm" variant="outline" className="flex-1 bg-transparent" asChild>
-                        <a href={project.github} target="_blank" rel="noopener noreferrer">
+                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                             <Github className="w-4 h-4 mr-2" />
                             Código
                         </a>
