@@ -10,7 +10,7 @@ export const projects: Project[] = [
   image: "/project/SPAheroes.png",
   category: "Full Stack",
   demoUrl: "https://example.com", 
-  githubUrl: "https://github.com/example/spa-heroes",
+  githubUrl: "https://github.com/Gerardoprogramer/heroes-app",
   technologies: [
     { name: "React", icon: "⚛️", color: "text-primary" },
     { name: "Vite", icon: "⚡", color: "text-accent" },
