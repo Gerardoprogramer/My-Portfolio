@@ -39,7 +39,7 @@ export const HomePage = () => {
           <ProjectPage />
         </section>
 
-        <section id="playground" className="min-h-screen py-20">
+        <section id="playground" className="min-h-screen py-20 hidden md:block">
           <PlaygroundPage />
         </section>
 

@@ -49,7 +49,7 @@ export const NavigationPage = ({ activeSection }: NavigationProps) => {
 
       {/* Mobile Navigation - Bottom Dock */}
       <nav className="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex gap-2 bg-card/90 backdrop-blur-lg border border-border rounded-2xl p-3 shadow-2xl">
-        {navItems.map((item) => {
+        {navItems.filter((item) => !(item.id === "playground")).map((item) => {
           const Icon = item.icon
           return (
             <button
