@@ -50,7 +50,6 @@ export const HomePage = () => {
           <Contact />
         </section>
       </div>
-
       {showDevConsole && <DevConsole onClose={() => setShowDevConsole(false)} />}
     </div>
   )
