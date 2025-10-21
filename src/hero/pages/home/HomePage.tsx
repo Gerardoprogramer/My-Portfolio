@@ -8,12 +8,15 @@ import { useSectionActive } from "@/hero/hooks/useSectionActive"
 import { ProjectPage } from "../projects/ProjectPage"
 import { PlaygroundPage } from "../playground/PlaygroundPage"
 import { Contact } from "../contact/Contact"
+import { useShowConsole } from "@/hero/hooks/useShowConsole"
+import { DevConsole } from "../devConsole/DevConsole"
 
 
 export const HomePage = () => {
 
   const { canvasRef } = useCanvasWorld()
   const { activeSection } = useSectionActive()
+  const { showDevConsole, setShowDevConsole } = useShowConsole()
 
   return (
     <div className="relative min-h-screen overflow-x-hidden bg-background">
@@ -44,11 +47,11 @@ export const HomePage = () => {
         </section>
 
         <section id="contact" className="min-h-screen py-20 bg-background">
-          <Contact/>
+          <Contact />
         </section>
       </div>
 
-
+      {showDevConsole && <DevConsole onClose={() => setShowDevConsole(false)} />}
     </div>
   )
 }
