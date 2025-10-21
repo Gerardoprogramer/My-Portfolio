@@ -30,7 +30,7 @@ export const Contact = () => {
 
         <div className="flex flex-col items-center justify-center text-center text-sm text-muted-foreground">
           <p>Hecho con ❤️ por Gerardo</p>
-          <p className="mt-2">
+          <p className="mt-2 hidden md:block">
             Presiona <kbd className="px-2 py-1 bg-secondary rounded text-xs">Ctrl</kbd> +{" "}
             <kbd className="px-2 py-1 bg-secondary rounded text-xs">Shift</kbd> +{" "}
             <kbd className="px-2 py-1 bg-secondary rounded text-xs">D</kbd> para un easter egg 🎉
