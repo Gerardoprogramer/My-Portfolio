@@ -7,6 +7,7 @@ import { SkillsPage } from "../skills/SkillsPage"
 import { useSectionActive } from "@/hero/hooks/useSectionActive"
 import { ProjectPage } from "../projects/ProjectPage"
 import { PlaygroundPage } from "../playground/PlaygroundPage"
+import { Contact } from "../contact/Contact"
 
 
 export const HomePage = () => {
@@ -40,6 +41,10 @@ export const HomePage = () => {
 
         <section id="playground" className="min-h-screen py-20">
           <PlaygroundPage />
+        </section>
+
+        <section id="contact" className="min-h-screen py-20 bg-background">
+          <Contact/>
         </section>
       </div>
 
