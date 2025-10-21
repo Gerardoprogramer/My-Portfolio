@@ -1,4 +1,3 @@
-"use client"
 
 import { Home, User, Code, Briefcase, Gamepad2, Mail } from "lucide-react"
 import { cn } from "@/lib/utils"
