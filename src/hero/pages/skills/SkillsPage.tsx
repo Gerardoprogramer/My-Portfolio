@@ -1,5 +1,5 @@
 import { CustomTitle } from "@/components/custom/CustomTitle"
-import { TechHexagon } from "./components/TechHexagon"
+import { TechHexagon } from "@/components/custom/TechHexagon"
 import { skills } from "@/hero/data/Skills.data"
 import { useSectionVisibility } from "@/hero/hooks/useSectionVisibility"
 
