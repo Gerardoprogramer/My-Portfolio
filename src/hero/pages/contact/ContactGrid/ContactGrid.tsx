@@ -14,7 +14,7 @@ export const ContactGrid = () => {
                     title="Email"
                     description="gerardoalonso.martinezmonge@gmail.com"
                     icon={Mail}
-                    isLink="mailto:gerardoalonso.martinezmonge@gmail.com"
+                    isLink="https://mail.google.com/mail/?view=cm&fs=1&to=gerardoalonso.martinezmonge@gmail.com&su=Contacto%20desde%20tu%20portfolio&body=Hola%20Gerardo,"
                 />
 
                 <ContactCard
