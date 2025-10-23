@@ -10,7 +10,7 @@ export const SocialCard = () => {
 
                 <ItemSocial
                     name="GitHub"
-                    link="https://mail.google.com/mail/?view=cm&fs=1&to=gerardoalonso.martinezmonge@gmail.com&su=Contacto%20desde%20tu%20portfolio&body=Hola%20Gerardo,"
+                    link="https://github.com/Gerardoprogramer"
                     icon={Github}
                 />
 
