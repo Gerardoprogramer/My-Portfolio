@@ -9,7 +9,7 @@ export const projects: Project[] = [
     "SPA Heroes es una aplicación web moderna centrada en la gestión de héroes. Desarrollada con React, TanStack Query y NestJS, permite explorar, buscar y editar héroes en una interfaz fluida tipo single-page. Incluye filtrado avanzado, paginación, enrutamiento dinámico y comunicación optimizada con una API REST construida en NestJS.",
   image: "/project/SPAheroes.png",
   category: "Full Stack",
-  demoUrl: "https://example.com", 
+  demoUrl: "https://gerardoprogramer.github.io/heroes-app", 
   githubUrl: "https://github.com/Gerardoprogramer/heroes-app",
   technologies: [
     { name: "React", icon: "⚛️", color: "text-primary" },

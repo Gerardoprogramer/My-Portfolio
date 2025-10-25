@@ -39,13 +39,13 @@ export const Card = ({ project, onClick }: CardProps) => {
 
                 <div className="flex gap-3 pt-2">
                     <Button size="sm" variant="outline" className="flex-1 bg-transparent" asChild>
-                        <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
+                        <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
                             <ExternalLink className="w-4 h-4 mr-2" />
                             Demo
                         </a>
                     </Button>
                     <Button size="sm" variant="outline" className="flex-1 bg-transparent" asChild>
-                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
                             <Github className="w-4 h-4 mr-2" />
                             Código
                         </a>
