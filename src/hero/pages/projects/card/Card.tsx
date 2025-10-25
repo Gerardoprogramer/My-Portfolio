@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import type { Project } from "@/hero/interfaces/Project.interface"
 
-interface CardProps{
+interface CardProps {
     project: Project,
     onClick: () => void
 }
@@ -29,12 +29,12 @@ export const Card = ({ project, onClick }: CardProps) => {
                 <p className="text-sm text-muted-foreground leading-relaxed">{project.description}</p>
 
                 <div className="flex flex-wrap gap-2">
-          {project.technologies.slice(0, 5).map((tech) => (
-            <Badge key={tech.name} variant="secondary" className="text-xs">
-              <span className="mr-1">{tech.icon}</span>
-              {tech.name}
-            </Badge>
-          ))}
+                    {project.technologies.slice(0, 5).map((tech) => (
+                        <Badge key={tech.name} variant="secondary" className="text-xs">
+                            <span className="mr-1">{tech.icon}</span>
+                            {tech.name}
+                        </Badge>
+                    ))}
                 </div>
 
                 <div className="flex gap-3 pt-2">
