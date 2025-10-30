@@ -1,73 +1,78 @@
-# React + TypeScript + Vite
+# 🌌 My‑Portfolio  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🎯 **Mi Portafolio Personal** — un viaje interactivo por mis proyectos, habilidades y creatividad como desarrollador full‑stack.  
+💻 100% desarrollado por mí, con **React, TypeScript, Vite, GSAP y Three.js**, incluyendo mini-juegos interactivos (solo para PC).
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 👨‍💻 Sobre mí
+Hola! Soy **Gerardo Programer**, un apasionado del desarrollo web y la interactividad.  
+Me encanta combinar **UI/UX limpio**, **animaciones épicas con GSAP**, y **experiencias 3D con Three.js** para que cada proyecto cobre vida.  
+✨ Cada línea de código es escrita con cuidado, tipada con TypeScript y pensada para escalar.
 
-## React Compiler
+---
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## 🚀 Tecnologías y Skills
 
-## Expanding the ESLint configuration
+| Categoría | Stack |
+|-----------|-------|
+| **Frontend** | React, TypeScript, Vite |
+| **UI / Estilos** | Tailwind CSS |
+| **Animaciones** | GSAP |
+| **3D / Interactividad** | Three.js |
+| **Deploy / Hosting** | Netlify |
+| **Configuración / Tools** | tsconfig, Vite config |
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🧩 Qué incluye
+- 🌈 **Responsive Design:** compatible con desktop y móvil.  
+- 🎮 **Mini-juegos épicos:** solo en PC, integrados en el portfolio.  
+- ✨ **Animaciones y microinteracciones:** todo con GSAP para un efecto wow.  
+- 🌌 **3D Interactivo:** escenas con Three.js que cobran vida al navegar.  
+- 📝 **Código limpio:** tipado en TypeScript, modular y listo para escalar.  
+- 🚀 **Deploy optimizado:** Netlify, rápido y ligero.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📦 Instalación y ejecución local  
+1. Clona el repositorio:  
+   ```bash
+   git clone https://github.com/Gerardoprogramer/My‑Portfolio.git  
+   cd My‑Portfolio  
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Instala dependencias:
+    ```bash
+   npm i
+    
+4. Ejecuta en modo desarrollo:
+    ```bash
+   npm run dev  
+  
+## ✅ Cómo contribuir
+Aunque este proyecto es mi portafolio personal, se aceptan sugerencias de mejora:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- 🐞 Reportar bugs o problemas de UI/UX mediante issues.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- ✨ Proponer mejoras, animaciones o nuevas secciones mediante PRs.
+
+- 💡 Sugerir optimizaciones para desktop y móvil.
+
+  ## 📌 Próximos pasos / Roadmap
+
+- 🇬🇧 Añadir versión en inglés.
+
+- 🌙 Integrar cambio de tema.
+
+- 🎮 Mejorar la sección de mini-juegos con nuevas mecánicas e interacciones.
+
+- 🔍 Optimización SEO y accesibilidad (WCAG AA).
+
+- 🚀 Desplegar en dominio propio y mejorar performance.
+
+## 🎓 Créditos
+
+Este portafolio fue desarrollado completamente por mí, Gerardo Programer.
+
+## 🔗 Links
+- 🌐 Demo en vivo: https://verdant-valkyrie-021748.netlify.app/
