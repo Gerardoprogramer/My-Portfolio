@@ -1,12 +1,12 @@
 
 interface TechHexagonProps {
     name: string
-    icon: string
+    icon: React.ComponentType<React.SVGProps<SVGSVGElement>>
     color: string
     index: number
 }
 
-export function TechHexagon({ name, icon, color, index }: TechHexagonProps) {
+export function TechHexagon({ name, icon : Icon, color, index }: TechHexagonProps) {
     return (
         <div
             className="flex flex-col items-center justify-center relative group cursor-pointer"
@@ -42,7 +42,7 @@ export function TechHexagon({ name, icon, color, index }: TechHexagonProps) {
 
             <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
                 <span className={`text-3xl sm:text-4xl mb-1 transition-transform duration-300 group-hover:scale-125 ${color}`}>
-                    {icon}
+                    <Icon/>
                 </span>
                 <span className="text-[10px] sm:text-xs font-medium text-card-foreground text-center px-2 opacity-90 group-hover:opacity-100 transition-opacity">
                     {name}

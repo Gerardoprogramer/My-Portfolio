@@ -15,6 +15,6 @@ export interface Project {
 
 export interface Technology {
   name: string
-  icon: string
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>
   color: string
 }

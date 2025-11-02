@@ -3,13 +3,14 @@ import { HeroPage } from "../hero/HeroPage"
 import { AboutPage } from "../about/AboutPage"
 import { NavigationPage } from "../navigation/NavigationPage"
 import { useCanvasWorld } from "@/hero/hooks/useCavasWorld"
-import { SkillsPage } from "../skills/SkillsPage"
 import { useSectionActive } from "@/hero/hooks/useSectionActive"
 import { ProjectPage } from "../projects/ProjectPage"
 import { PlaygroundPage } from "../playground/PlaygroundPage"
 import { Contact } from "../contact/Contact"
 import { useShowConsole } from "@/hero/hooks/useShowConsole"
 import { DevConsole } from "../devConsole/DevConsole"
+import { SkillsShowcase } from "../skills/SkillsShowcase"
+import { SkillsPage } from "../skills/SkillsPage"
 
 
 export const HomePage = () => {
@@ -34,7 +35,8 @@ export const HomePage = () => {
           <AboutPage />
         </section>
 
-        <section id="skills" className="min-h-screen py-20">
+        <section id="skills" className="min-h-screen py-20 ">
+          <SkillsShowcase />
           <SkillsPage />
         </section>
 

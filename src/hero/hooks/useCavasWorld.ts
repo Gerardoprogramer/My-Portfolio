@@ -73,7 +73,7 @@ export const useCanvasWorld = () => {
     const wireframe = new THREE.Mesh(wireframeGeometry, wireframeMaterial)
     planetGroup.add(wireframe)
 
-    skills.forEach((skill, index) => {
+    skills.forEach((_, index) => {
       const angle = (index / skills.length) * Math.PI * 2
       const height = Math.sin(index * 0.7) * 0.5
       const radius = 2.5
@@ -96,7 +96,7 @@ export const useCanvasWorld = () => {
 
       const ringGeometry = new THREE.RingGeometry(0.2, 0.25, 32)
       const ringMaterial = new THREE.MeshBasicMaterial({
-        color: skill.color,
+        color: '#3b82f6',
         transparent: true,
         opacity: 0.6,
         side: THREE.DoubleSide,
