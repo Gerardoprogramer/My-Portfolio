@@ -1,7 +1,7 @@
 import { ExternalLink, Github } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
 import type { Project } from "@/hero/interfaces/Project.interface"
+import { ItemTechnologie } from "./ItemTechnologie"
 
 interface CardProps {
     project: Project,
@@ -9,6 +9,7 @@ interface CardProps {
 }
 
 export const Card = ({ project, onClick }: CardProps) => {
+
     return (
         <div
             key={project.title}
@@ -30,10 +31,7 @@ export const Card = ({ project, onClick }: CardProps) => {
 
                 <div className="flex flex-wrap gap-2">
                     {project.technologies.slice(0, 5).map((tech) => (
-                        <Badge key={tech.name} variant="secondary" className="text-xs">
-                            <span className="mr-1">{tech.icon}</span>
-                            {tech.name}
-                        </Badge>
+                        <ItemTechnologie technology={tech} />
                     ))}
                 </div>
 

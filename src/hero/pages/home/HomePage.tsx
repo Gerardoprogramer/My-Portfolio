@@ -9,7 +9,8 @@ import { PlaygroundPage } from "../playground/PlaygroundPage"
 import { Contact } from "../contact/Contact"
 import { useShowConsole } from "@/hero/hooks/useShowConsole"
 import { DevConsole } from "../devConsole/DevConsole"
-import { CodeEditor } from "../skills/codeEditor/CodeEditor"
+import { SkillsShowcase } from "../skills/SkillsShowcase"
+import { SkillsPage } from "../skills/SkillsPage"
 
 
 export const HomePage = () => {
@@ -34,8 +35,9 @@ export const HomePage = () => {
           <AboutPage />
         </section>
 
-        <section id="skills" className="min-h-screen py-20 bg-background">
-          <CodeEditor/>
+        <section id="skills" className="min-h-screen py-20 ">
+          <SkillsShowcase />
+          <SkillsPage />
         </section>
 
         <section id="projects" className="min-h-screen py-20">

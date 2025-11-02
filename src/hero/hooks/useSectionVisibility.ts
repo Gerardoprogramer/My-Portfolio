@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from "react"
+import type { SkillCategory } from "../interfaces/SkillsV2.interface"
 
 export const useSectionVisibility = () => {
  const [isVisible, setIsVisible] = useState(false)
-    const [selectedSkill, setSelectedSkill] = useState<string | null>(null)
+    const [selectedSkill, setSelectedSkill] = useState<SkillCategory | null>(null)
     const sectionRef = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
