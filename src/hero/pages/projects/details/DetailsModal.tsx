@@ -30,10 +30,16 @@ export const DetailsModal = ({ project, open, onClose }: ProjectDetailModalProps
         </button>
 
         <ScrollArea className="max-h-[90vh]">
-          <div className="relative h-64 w-full overflow-hidden">
-            <img src={project.image} alt={project.title} className="object-cover border border-border rounded-lg h-full" />
+          <div className="relative h-64 w-full overflow-hidden rounded-lg border border-border">
+            <img
+              src={project.image}
+              alt={project.title}
+              className="w-full h-full object-cover object-center"
+            />
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
-            <Badge className="absolute top-4 left-4 bg-primary/90 backdrop-blur-sm">{project.category}</Badge>
+            <Badge className="absolute top-4 left-4 bg-primary/90 backdrop-blur-sm">
+              {project.category}
+            </Badge>
           </div>
 
           <div className="p-6 space-y-6">
