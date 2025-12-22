@@ -43,7 +43,8 @@ export const HeroPage = () => {
                 </div>
 
                 <p className="text-lg text-muted-foreground/80 max-w-2xl mx-auto text-balance leading-relaxed">
-                    Construyendo experiencias digitales que combinan diseño elegante con código sólido
+                    Desarrollador Full Stack especializado en React, TypeScript y APIs escalables,
+                    enfocado en crear experiencias web modernas y mantenibles.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
@@ -52,7 +53,7 @@ export const HeroPage = () => {
                         className="text-lg px-8 py-6 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 group"
                         onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
                     >
-                        Ver Proyectos
+                        Explorar Proyectos
                         <Code2 className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
                     </Button>
                     <Button

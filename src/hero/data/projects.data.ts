@@ -12,8 +12,8 @@ import {
   Boxes,
   ShieldCheck,
   Globe,
-  Server, 
-  Layers, 
+  Server,
+  Layers,
 } from "lucide-react"
 
 export const projects: Project[] = [
@@ -86,35 +86,33 @@ export const projects: Project[] = [
       "Aprendí a estructurar un proyecto full stack con separación clara entre frontend y backend, implementando autenticación JWT, validaciones avanzadas con Formik, y persistencia de estado global con Zustand. Además, reforcé mis conocimientos en despliegue con Docker y manejo de base de datos PostgreSQL.",
   },
   {
-    id: "saas-restaurantes",
-    title: "SaaS Restaurantes",
-    description: "Plataforma SaaS moderna para gestión integral de restaurantes.",
+    id: "sistema-restaurante-web",
+    title: "Sistema Web de Gestión de Restaurante",
+    description: "Aplicación web para la gestión de operaciones internas de un restaurante.",
     longDescription:
-      "SaaS Restaurantes es una plataforma en desarrollo enfocada en ofrecer herramientas completas para la administración de restaurantes. Está construida con FastAPI en el backend y Next.js en el frontend, ofreciendo una arquitectura moderna, escalable y multitenant. El sistema incluirá gestión de menús, pedidos, mesas, inventario, reportes y paneles de control tanto para dueños como empleados. Actualmente se encuentra en fase inicial de desarrollo y está siendo creado junto a tres colegas como un proyecto colaborativo de gran alcance.",
-    image: "/project/hero-restaurant.png",
-    category: "Full Stack",
-    demoUrl: "",
-    githubUrl: "",
+      "Sistema Web de Gestión de Restaurante es una aplicación web desarrollada con C# y .NET, enfocada en automatizar y centralizar procesos clave de un restaurante. El proyecto implementa una arquitectura modular y organizada, separando la lógica de negocio, modelos de datos y presentación. Sirve como base escalable para funcionalidades como gestión de pedidos, inventario y administración general, demostrando buenas prácticas en desarrollo web con .NET.",
+    image: "/project/Restaurante.png",
+    category: "Full Stack Web",
+    demoUrl: "https://restaurante-production-0b33.up.railway.app",
+    githubUrl: "https://github.com/Gerardoprogramer/Restaurante",
     technologies: [
-      { name: "Next.js", icon: Globe, color: "text-primary" },
-      { name: "TypeScript", icon: FileType2, color: "text-chart-2" },
-      { name: "FastAPI", icon: Server, color: "text-chart-3" },
-      { name: "PostgreSQL", icon: Database, color: "text-chart-4" },
-      { name: "Docker", icon: Boxes, color: "text-chart-5" },
-      { name: "JWT", icon: ShieldCheck, color: "text-chart-6" },
-      { name: "Arquitectura Multitenant", icon: Layers, color: "text-chart-7" },
+      { name: "C#", icon: Server, color: "text-chart-3" },
+      { name: ".NET", icon: FileType2, color: "text-chart-2" },
+      { name: "ASP.NET", icon: Layers, color: "text-chart-7" },
+      { name: "HTML", icon: Globe, color: "text-primary" },
+      { name: "Arquitectura en capas", icon: Boxes, color: "text-chart-5" }
     ],
     features: [
-      "Gestión de restaurantes, menús y pedidos",
-      "Panel de control para dueños y empleados",
-      "Autenticación con tokens JWT",
-      "Arquitectura multitenant y escalable",
-      "Diseño responsive con Tailwind CSS",
-      "Despliegue con Docker y PostgreSQL",
+      "Aplicación web estructurada en capas",
+      "Separación de lógica de negocio, modelos y presentación",
+      "Base para gestión de pedidos y operaciones del restaurante",
+      "Arquitectura preparada para escalar funcionalidades",
+      "Código organizado y mantenible"
     ],
     challenges:
-      "El desafío principal será diseñar una arquitectura SaaS multitenant sólida y segura, asegurando el aislamiento de datos entre restaurantes y una experiencia fluida para cada usuario.",
+      "El principal desafío fue estructurar correctamente una aplicación web en .NET, asegurando una clara separación de responsabilidades y una base sólida para futuras ampliaciones.",
     learnings:
-      "El proyecto servirá para profundizar en arquitectura SaaS, autenticación avanzada, despliegue en contenedores y diseño de sistemas modulares orientados a escalabilidad. También fortalecerá la colaboración en equipo y el uso de buenas prácticas en proyectos grandes.",
-  },
+      "Fortalecí mis conocimientos en desarrollo web con ASP.NET, arquitectura en capas y organización de proyectos escalables, aplicando buenas prácticas de diseño y mantenimiento de código."
+  }
+  ,
 ]
