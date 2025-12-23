@@ -63,7 +63,7 @@ export const SkillsShowcase = () => {
                 {/* Footer Note */}
                 <div className="mt-16 text-center">
                     <p className="text-sm text-white italic">
-                        Aprendiendo y ampliando continuamente mis habilidades.
+                        Aprendiendo y ampliando continuamente mis habilidades. 
                     </p>
                 </div>
             </div>

@@ -19,7 +19,7 @@ export const ContactGrid = () => {
 
                 <ContactCard
                     title="Disponibilidad"
-                    description="Abierto a proyectos freelance y colaboraciones"
+                    description="Abierto a oportunidades laborales como desarrollador full stack."
                     icon={Code2}
                     isAccent={true}
                 />

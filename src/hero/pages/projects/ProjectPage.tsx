@@ -9,7 +9,7 @@ export const ProjectPage = () => {
     <div className="container mx-auto px-6 max-w-6xl">
       <div className="space-y-12">
 
-        <CustomTitle title="Proyectos Destacados" subtitle="Cada proyecto refleja mi enfoque en crear soluciones escalables con excelente UX" />
+        <CustomTitle title="Proyectos Destacados" subtitle="Una selección de proyectos donde aplico buenas prácticas de desarrollo para construir soluciones escalables y centradas en la experiencia del usuario." />
 
         <GridCards projects={projects} />
 

@@ -49,7 +49,7 @@ export const SkillsCard = ({isVisible, name, selectedSkill, setSelectedSkill}: P
                                         </div>
                                     </div>
 
-                                    <h3 className="text-xl font-bold text-center">{name}</h3>
+                                    <h3 className="text-xl font-bold text-center">{name === 'soft' ? 'Soft Skills' : name}</h3>
 
                                     <div className="flex justify-center gap-1">
                                         {[...Array(5)].map((_, i) => (

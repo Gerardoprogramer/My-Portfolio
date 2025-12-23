@@ -64,7 +64,7 @@ export const skills: Skills = {
     { name: "Postman", icon: Settings },
     { name: "CI/CD", icon: Workflow },
   ],
-  soft: [
+  soft : [
     { name: "Team Leadership", icon: Users },
     { name: "Communication", icon: MessageSquare },
     { name: "Problem Solving", icon: Lightbulb },

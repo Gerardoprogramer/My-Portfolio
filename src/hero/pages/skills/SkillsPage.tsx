@@ -22,10 +22,10 @@ export const SkillsPage = () => {
                 />
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <SkillsCard name='frontend' isVisible={isVisible} selectedSkill={selectedSkill} setSelectedSkill={setSelectedSkill}/>
-                    <SkillsCard name='backend' isVisible={isVisible} selectedSkill={selectedSkill} setSelectedSkill={setSelectedSkill}/>
-                    <SkillsCard name='tools' isVisible={isVisible} selectedSkill={selectedSkill} setSelectedSkill={setSelectedSkill}/>
-                    <SkillsCard name='soft' isVisible={isVisible} selectedSkill={selectedSkill} setSelectedSkill={setSelectedSkill}/>
+                    <SkillsCard name='frontend' isVisible={isVisible} selectedSkill={selectedSkill} setSelectedSkill={setSelectedSkill} />
+                    <SkillsCard name='backend' isVisible={isVisible} selectedSkill={selectedSkill} setSelectedSkill={setSelectedSkill} />
+                    <SkillsCard name='tools' isVisible={isVisible} selectedSkill={selectedSkill} setSelectedSkill={setSelectedSkill} />
+                    <SkillsCard name='soft' isVisible={isVisible} selectedSkill={selectedSkill} setSelectedSkill={setSelectedSkill} />
 
                 </div>
 
@@ -38,11 +38,10 @@ export const SkillsPage = () => {
                     >
                         <div className="flex items-center gap-4">
                             <h3 className="text-2xl font-bold">
-                                Tecnologías de{" "}
                                 <span
                                     className={`bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent`}
                                 >
-                                    {selectedSkill}
+                                    {selectedSkill === 'soft' ? 'Soft Skills' : selectedSkill + ' Stack'}
                                 </span>
                             </h3>
                             <button
