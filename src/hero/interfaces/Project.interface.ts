@@ -1,3 +1,5 @@
+import type { SkillIconKey } from "../data/skillPaths"
+
 export interface Project {
   id: string
   title: string
@@ -15,6 +17,6 @@ export interface Project {
 
 export interface Technology {
   name: string
-  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>
+  icon: SkillIconKey
   color: string
 }

@@ -1,12 +1,13 @@
+import { skillPaths, type SkillIconKey } from "@/hero/data/skillPaths"
 import { cn } from "@/lib/utils";
 
 interface SkillBadgeProps {
     name: string;
-    icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+    icon?: SkillIconKey;
     featured?: boolean;
 }
 
-export const SkillBadge = ({ name, icon: Icon, featured = false }: SkillBadgeProps) => {
+export const SkillBadge = ({ name, icon, featured = false }: SkillBadgeProps) => {
     return (
         <div
             className={cn(
@@ -19,13 +20,20 @@ export const SkillBadge = ({ name, icon: Icon, featured = false }: SkillBadgePro
             {featured && (
                 <div className="absolute -top-1 -right-1 w-3 h-3 bg-accent rounded-full animate-glow" />
             )}
-            {Icon && (
-                <Icon className={cn(
-                    "w-4 h-4 transition-transform duration-300",
-                    featured
-                        ? "text-primary group-hover:scale-125 group-hover:rotate-12"
-                        : "text-primary group-hover:scale-110"
-                )} />
+            {icon && (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className="
+        w-6 h-6
+        text-primary
+        drop-shadow-[0_0_6px_theme(colors.primary.DEFAULT)]
+        group-hover:drop-shadow-[0_0_14px_theme(colors.primary.DEFAULT)]
+        transition-all
+      "
+    >
+      <path d={skillPaths[icon]} />
+    </svg>
             )}
             <span className={cn(
                 "text-sm font-medium",
