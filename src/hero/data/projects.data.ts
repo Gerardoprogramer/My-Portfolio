@@ -1,54 +1,38 @@
 import type { Project } from "../interfaces/Project.interface"
-import {
-  Atom,
-  Zap,
-  FileType2,
-  Repeat,
-  Flame,
-  FlaskConical,
-  Brain,
-  PencilLine,
-  Database,
-  Boxes,
-  ShieldCheck,
-  Globe,
-  Server,
-  Layers,
-} from "lucide-react"
 
 export const projects: Project[] = [
-  {
-    id: "spa-heroes",
-    title: "SPA Heroes",
-    description: "Aplicación de héroes con búsqueda, detalle y gestión completa de personajes.",
-    longDescription:
-      "SPA Heroes es una aplicación web moderna centrada en la gestión de héroes. Desarrollada con React, TanStack Query y NestJS, permite explorar, buscar y editar héroes en una interfaz fluida tipo single-page. Incluye filtrado avanzado, paginación, enrutamiento dinámico y comunicación optimizada con una API REST construida en NestJS.",
-    image: "/project/SPAheroes.png",
-    category: "Full Stack",
-    demoUrl: "https://gerardoprogramer.github.io/heroes-app",
-    githubUrl: "https://github.com/Gerardoprogramer/heroes-app",
-    technologies: [
-      { name: "React", icon: Atom, color: "text-primary" },
-      { name: "Vite", icon: Zap, color: "text-accent" },
-      { name: "TypeScript", icon: FileType2, color: "text-chart-2" },
-      { name: "TanStack Query", icon: Repeat, color: "text-chart-3" },
-      { name: "NestJS", icon: Flame, color: "text-chart-4" },
-      { name: "Vitest", icon: FlaskConical, color: "text-chart-5" },
-    ],
-    features: [
-      "Búsqueda y filtrado dinámico de héroes",
-      "Rutas dinámicas para detalles individuales",
-      "Paginación y búsqueda mediante searchParams",
-      "Sincronización de datos y caché con TanStack Query",
-      "Comunicación con API REST en NestJS",
-      "Diseño responsive con Tailwind CSS",
-      "Tests unitarios con Vitest y React Testing Library",
-    ],
-    challenges:
-      "El mayor desafío fue mantener sincronizados los estados de búsqueda, paginación y datos en caché entre la interfaz y la API, garantizando un flujo de navegación fluido y eficiente.",
-    learnings:
-      "Fortalecí mis conocimientos sobre arquitectura modular entre frontend y backend, y aprendí a implementar paginación y búsqueda con searchParams, además de manejar el estado remoto y caché de datos con TanStack Query.",
-  },
+{
+  id: "library-management-system",
+  title: "Sistema de Gestión de Librería",
+  description: "Sistema full stack para la gestión de libros, usuarios y préstamos (en desarrollo).",
+  longDescription:
+    "Sistema de Gestión de Librería es un proyecto full stack en desarrollo, enfocado en simular un entorno real de negocio. El backend está construido con Spring Boot siguiendo buenas prácticas como uso de DTOs, validaciones, servicios y arquitectura modular. El frontend se desarrolla con React y TypeScript, consumiendo una API REST segura y escalable. El sistema está diseñado para crecer con funcionalidades como autenticación por roles, préstamos de libros y panel administrativo.",
+  image: "/project/managementLibrary.png",
+  category: "Full Stack",
+  demoUrl: "",
+  githubUrl: "https://github.com/Gerardoprogramer/library-management-system",
+  technologies: [
+    { name: "React", icon: "react", color: "text-primary" },
+    { name: "TypeScript", icon: "typescript", color: "text-chart-2" },
+    { name: "Spring Boot", icon: "springboot", color: "text-chart-4" },
+    { name: "TanStack Query", icon: "tanstack", color: "text-chart-3" },
+    { name: "PostgreSQL", icon: "postgresql", color: "text-chart-6" },
+    { name: "JWT", icon: "JWT", color: "text-chart-8" },
+  ],
+  features: [
+    "API REST desarrollada con Spring Boot",
+    "Arquitectura basada en controladores, servicios y DTOs",
+    "Gestión de libros, autores y categorías",
+    "Diseño de sistema de préstamos de libros",
+    "Autenticación y autorización por roles (en progreso)",
+    "Frontend en React consumiendo API REST",
+    "Proyecto preparado para escalar y agregar nuevas funcionalidades"
+  ],
+  challenges:
+    "El principal reto ha sido diseñar una arquitectura backend clara y escalable en Spring Boot, asegurando una correcta separación de responsabilidades y una base sólida para futuras funcionalidades como préstamos y control de usuarios.",
+  learnings:
+    "Estoy reforzando mis conocimientos en Spring Boot, diseño de APIs REST, arquitectura backend y comunicación frontend-backend, aplicando patrones reales utilizados en entornos profesionales."
+},
   {
     id: "trendora",
     title: "Trendora",
@@ -60,15 +44,15 @@ export const projects: Project[] = [
     demoUrl: "https://trendoragm.netlify.app/",
     githubUrl: "https://github.com/Gerardoprogramer/Trendora",
     technologies: [
-      { name: "React", icon: Atom, color: "text-primary" },
-      { name: "Vite", icon: Zap, color: "text-accent" },
-      { name: "TypeScript", icon: FileType2, color: "text-chart-2" },
-      { name: "Zustand", icon: Brain, color: "text-chart-3" },
-      { name: "Formik", icon: PencilLine, color: "text-chart-4" },
-      { name: "NestJS", icon: Flame, color: "text-chart-5" },
-      { name: "PostgreSQL", icon: Database, color: "text-chart-6" },
-      { name: "Docker", icon: Boxes, color: "text-chart-7" },
-      { name: "JWT", icon: ShieldCheck, color: "text-chart-8" },
+      { name: "React", icon: "react", color: "text-primary" },
+      { name: "Vite", icon: "vite", color: "text-accent" },
+      { name: "TypeScript", icon: "typescript", color: "text-chart-2" },
+      { name: "Zustand", icon: "zustand", color: "text-chart-3" },
+      { name: "Formik", icon: "Formik", color: "text-chart-4" },
+      { name: "NestJS", icon: "nestjs", color: "text-chart-5" },
+      { name: "PostgreSQL", icon: "postgresql", color: "text-chart-6" },
+      { name: "Docker", icon: "docker", color: "text-chart-7" },
+      { name: "JWT", icon: "JWT", color: "text-chart-8" },
     ],
     features: [
       "Catálogo de productos con filtros dinámicos",
@@ -96,11 +80,11 @@ export const projects: Project[] = [
     demoUrl: "https://restaurante-production-0b33.up.railway.app",
     githubUrl: "https://github.com/Gerardoprogramer/Restaurante",
     technologies: [
-      { name: "C#", icon: Server, color: "text-chart-3" },
-      { name: ".NET", icon: FileType2, color: "text-chart-2" },
-      { name: "ASP.NET", icon: Layers, color: "text-chart-7" },
-      { name: "HTML", icon: Globe, color: "text-primary" },
-      { name: "Arquitectura en capas", icon: Boxes, color: "text-chart-5" }
+      { name: "C#", icon: "C_sharp", color: "text-chart-3" },
+      { name: ".NET", icon: "dotnet", color: "text-chart-2" },
+      { name: "ASP.NET", icon: "ASP", color: "text-chart-7" },
+      { name: "HTML", icon: "html5", color: "text-primary" },
+      { name: "Arquitectura en capas", icon: "architecture", color: "text-chart-5" }
     ],
     features: [
       "Aplicación web estructurada en capas",

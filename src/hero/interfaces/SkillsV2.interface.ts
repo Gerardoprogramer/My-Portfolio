@@ -1,7 +1,8 @@
+import type { SkillIconKey } from "../data/skillPaths";
 
 export interface Skill {
   name: string;
-  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  icon: SkillIconKey;
   featured?: boolean;
 }
 
